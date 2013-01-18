@@ -15,12 +15,14 @@
 <header>
 
 <p class="logo">OzJS</p>
-<p class="header">OzJS is a microkernel for modular javascript, with bundles of powerful yet micro-framework friendly AMD modules.</p>
+<p class="header">A microkernel for modular javascript, a toolchain for modern front-end, a micro-framework for growable WebApp.</p>
 
 <ul class="buttons">
   <li><a class="buttons github" href="https://github.com/dexteryy/OzJS">View On GitHub</a></li>
   <!--<li class="download"><a class="buttons" href="https://github.com/dexteryy/OzJS/zipball/master">Download ZIP</a></li>-->
   <!--<li class="download"><a class="buttons" href="https://github.com/dexteryy/OzJS/tarball/master">Download TAR</a></li>-->
+  <a href="http://weibo.com/ozjs" target="_blank" class="followme weibo">关注微博</a>
+  <a href="http://site.douban.com/199314/" target="_blank" class="followme doubansite">关注豆瓣小站</a>
 </ul>
 
 </header>
@@ -43,6 +45,7 @@
             <li><a href="/EventMaster/">EventMaster</a></li>
             <li><a href="/URLKit/">URLKit</a></li>
             <li><a href="/DollarJS/">DollarJS</a></li>
+            <li><a href="/SovietJS/">SovietJS</a></li>
             <li><a href="/CordJS/">CordJS</a></li>
             <li><a href="/ChoreoJS/">ChoreoJS</a></li>
             <li><a href="/mo/">Mo</a></li>
@@ -59,7 +62,7 @@
 
 <div class="wrapper">
 <section>
-<h1 id="toc_109">Mo</h1>
+<h1 id="toc_288">Mo</h1>
 
 <blockquote>
 <ul>
@@ -67,7 +70,7 @@
 </ul>
 </blockquote>
 
-<h2 id="toc_110">AMD and OzJS</h2>
+<h2 id="toc_289">AMD and OzJS</h2>
 
 <ul>
 <li>Mo can either be viewed as an independent library, or as a part of <a href="http://ozjs.org/#framework">OzJS mirco-framework</a>.</li>
@@ -76,13 +79,18 @@
 <li>See <a href="http://ozjs.org">http://ozjs.org</a> for details.</li>
 </ul>
 
-<h2 id="toc_111">Modules Overview</h2>
+<h2 id="toc_290">Modules Overview</h2>
 
 <ul>
 <li><a href="https://github.com/dexteryy/mo/blob/master/lang.js">mo/lang</a>: 
 
 <ul>
 <li>ES5/6 shim and minimum utilities for language enhancement</li>
+<li><a href="https://github.com/dexteryy/mo/blob/master/lang/es5.js">mo/lang/es5</a></li>
+<li><a href="https://github.com/dexteryy/mo/blob/master/lang/type.js">mo/lang/type</a></li>
+<li><a href="https://github.com/dexteryy/mo/blob/master/lang/mix.js">mo/lang/mix</a></li>
+<li><a href="https://github.com/dexteryy/mo/blob/master/lang/oop.js">mo/lang/oop</a></li>
+<li><a href="https://github.com/dexteryy/mo/blob/master/lang/struct.js">mo/lang/struct</a></li>
 </ul></li>
 <li><a href="https://github.com/dexteryy/mo/blob/master/domready.js">mo/domready</a>: 
 
@@ -104,6 +112,8 @@
 
 <ul>
 <li>A lightweight and enhanced micro-template implementation, and minimum utilities</li>
+<li><a href="https://github.com/dexteryy/mo/blob/master/template/string.js">mo/template/string</a>: </li>
+<li><a href="https://github.com/dexteryy/mo/blob/master/template/micro.js">mo/template/micro</a>: </li>
 </ul></li>
 <li><a href="https://github.com/dexteryy/mo/blob/master/network.js">mo/network</a>: 
 
@@ -129,13 +139,13 @@
 </ul></li>
 </ul>
 
-<h2 id="toc_112">Examples</h2>
+<h2 id="toc_291">Examples</h2>
 
 <ul>
 <li><a href="http://ozjs.org/mo/examples/lang">demo for mo/lang</a></li>
 </ul>
 
-<h2 id="toc_113">Get the code</h2>
+<h2 id="toc_292">Get the code</h2>
 
 <ul>
 <li><a href="https://github.com/dexteryy/mo/blob/master/">View/download on Github</a></li>
@@ -147,30 +157,20 @@
 </ul></li>
 </ul>
 
-<h2 id="toc_114">API and usage</h2>
+<h2 id="toc_293">API and usage</h2>
 
-<h3 id="toc_115">mo/lang</h3>
+<h3 id="toc_294">mo/lang</h3>
 <div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">_</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mo/lang&#39;</span><span class="p">);</span>
 </code></pre>
 </div>
 
 <ul>
-<li><code>_.type(sth)</code> -- </li>
-<li><code>_.isFunction(sth)</code> -- </li>
-<li><code>_.isWindow(sth)</code> -- </li>
-<li><code>_.isEmptyObject(sth)</code> -- </li>
-<li><code>_.mix(origin, obj1, obj2, ..., depth)</code> -- </li>
-<li><code>_.merge(origin, obj1, obj2, ..., depth)</code> -- </li>
-<li><code>_.interset(origin, obj1, obj2, ..., depth)</code> -- </li>
-<li><code>_.defaults(origin, obj1, obj2, ..., depth)</code> -- </li>
-<li><code>_.copy(origin, depth)</code> -- </li>
-<li><code>_.occupy(origin, obj, depth)</code> -- </li>
-<li><code>_.config(cfg, opt, DEFAULT_CFG)</code> -- </li>
-<li><code>_.unique(list)</code> -- </li>
 <li><code>_.ns(string, value)</code> -- </li>
-<li><code>_.FnQueue()</code> -- </li>
+<li>same as below</li>
 </ul>
-<div class="highlight"><pre><code class="javascript"><span class="c1">// Add ES5 methods in browsers that don&#39;t natively support them:</span>
+
+<h4 id="toc_295">mo/lang/es5</h4>
+<div class="highlight"><pre><code class="javascript"><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mo/lang/es5&#39;</span><span class="p">);</span> <span class="c1">// Add ES5 methods in browsers that don&#39;t natively support them</span>
 </code></pre>
 </div>
 
@@ -191,14 +191,61 @@
 <li><code>Function.prototype.bind</code></li>
 </ul>
 
-<h3 id="toc_116">mo/domready</h3>
+<h4 id="toc_296">mo/lang/type</h4>
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">_</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mo/lang/type&#39;</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<ul>
+<li><code>_.type(sth)</code> -- </li>
+<li><code>_.isFunction(sth)</code> -- </li>
+<li><code>_.isWindow(sth)</code> -- </li>
+<li><code>_.isEmptyObject(sth)</code> -- </li>
+</ul>
+
+<h4 id="toc_297">mo/lang/mix</h4>
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">_</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mo/lang/mix&#39;</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<ul>
+<li><code>_.mix(origin, obj1, obj2, ..., depth)</code> -- </li>
+<li><code>_.merge(origin, obj1, obj2, ..., depth)</code> -- </li>
+<li><code>_.interset(origin, obj1, obj2, ..., depth)</code> -- </li>
+<li><code>_.copy(origin, depth)</code> -- </li>
+<li><code>_.occupy(origin, obj, depth)</code> -- </li>
+<li><code>_.defaults(origin, obj1, obj2, ..., depth)</code> -- </li>
+<li><code>_.config(cfg, opt, DEFAULT_CFG)</code> -- </li>
+<li><code>_.unique(list)</code> -- </li>
+</ul>
+
+<h4 id="toc_298">mo/lang/oop</h4>
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">_</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mo/lang/oop&#39;</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<ul>
+<li><code>_.construct(base, /*mixes,*/ factory)</code> -- </li>
+</ul>
+
+<h4 id="toc_299">mo/lang/struct</h4>
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">_</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mo/lang/struct&#39;</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<ul>
+<li><code>_.index(array, key)</code> -- </li>
+<li><code>_.fnQueue()</code> -- </li>
+</ul>
+
+<h3 id="toc_300">mo/domready</h3>
 <div class="highlight"><pre><code class="javascript"><span class="nx">require</span><span class="p">([</span><span class="s1">&#39;mo/domready&#39;</span><span class="p">],</span> <span class="kd">function</span><span class="p">(</span><span class="nx">none</span><span class="p">){</span>
     <span class="c1">// won&#39;t execute until the page&#39;s entire DOM has loaded</span>
 <span class="p">});</span>
 </code></pre>
 </div>
 
-<h3 id="toc_117">mo/browsers</h3>
+<h3 id="toc_301">mo/browsers</h3>
 <div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">browsers</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mo/browsers&#39;</span><span class="p">);</span>
 </code></pre>
 </div>
@@ -211,7 +258,7 @@
 <li><code>browsers[&#39;msie&#39;|&#39;webkit&#39;|&#39;mozilla&#39;|...]</code> --</li>
 </ul>
 
-<h3 id="toc_118">mo/cookie</h3>
+<h3 id="toc_302">mo/cookie</h3>
 <div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">cookie</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mo/cookie&#39;</span><span class="p">);</span>
 
 <span class="nx">cookie</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">value</span><span class="p">,</span> <span class="p">{</span>
@@ -223,36 +270,62 @@
 </code></pre>
 </div>
 
-<h3 id="toc_119">mo/template</h3>
+<h3 id="toc_303">mo/template</h3>
 <div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">tpl</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mo/template&#39;</span><span class="p">);</span>
 </code></pre>
 </div>
 
 <ul>
+<li><code>tpl.str2html(string)</code> -- </li>
+<li>same as below</li>
+</ul>
+
+<h4 id="toc_304">mo/template/string</h4>
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">tpl</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mo/template/string&#39;</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<ul>
+<li><code>tpl.format(string, dict|list)</code> -- </li>
 <li><code>tpl.escapeHTML(string)</code> -- </li>
 <li><code>tpl.substr(string, limit, callback)</code> -- </li>
 <li><code>tpl.strsize(string)</code> -- </li>
-<li><code>tpl.str2html(string)</code> -- </li>
-<li><code>tpl.format(string, dict|list)</code> -- </li>
+</ul>
+
+<h4 id="toc_305">mo/template/micro</h4>
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">tpl</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mo/template/micro&#39;</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<ul>
 <li><code>tpl.convertTpl(tplName|tplString, dictData, namespace)</code> -- </li>
 <li><code>tpl.reloadTpl(tplName)</code> -- </li>
 </ul>
 
-<h3 id="toc_120">mo/network</h3>
+<h3 id="toc_306">mo/network</h3>
 <div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">net</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mo/network&#39;</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<ul>
+<li><code>net.getScript(url, callback)</code> -- </li>
+<li><code>net.getStyle(url)</code> -- </li>
+<li><code>net.getJSON(url, params, callback, options)</code> -- </li>
+<li><code>net.getRequest(url, params)</code> -- </li>
+<li>same as below</li>
+</ul>
+
+<h4 id="toc_307">mo/network/ajax</h4>
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">net</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mo/network/ajax&#39;</span><span class="p">);</span>
 </code></pre>
 </div>
 
 <ul>
 <li><code>net.ajax(options)</code> -- </li>
 <li><code>net.params(data)</code> -- </li>
-<li><code>net.getScript(url, callback)</code> -- </li>
-<li><code>net.getStyle(url)</code> -- </li>
-<li><code>net.getJSON(url, params, callback, options)</code> -- </li>
-<li><code>net.getRequest(url, params)</code> -- </li>
 </ul>
 
-<h3 id="toc_121">mo/easing</h3>
+<h3 id="toc_308">mo/easing</h3>
 <div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">easingLib</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mo/easing&#39;</span><span class="p">);</span>
 </code></pre>
 </div>
@@ -278,7 +351,7 @@
 </code></pre>
 </div>
 
-<h3 id="toc_122">mo/mainloop</h3>
+<h3 id="toc_309">mo/mainloop</h3>
 <div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">loop</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mo/mainloop&#39;</span><span class="p">);</span>
 </code></pre>
 </div>
@@ -297,7 +370,7 @@
 <li><code>loop.addTween(stageName, current, end, duration, options)</code> -- </li>
 </ul>
 
-<h3 id="toc_123">mo/key</h3>
+<h3 id="toc_310">mo/key</h3>
 <div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">Key</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mo/key&#39;</span><span class="p">);</span>
 </code></pre>
 </div>
@@ -323,15 +396,15 @@
 
 <p>Under construction...</p>
 
-<h2 id="toc_124">More References</h2>
+<h2 id="toc_311">More References</h2>
 
 <p>See <a href="http://ozjs.org/#ref">OzJS References</a></p>
 
-<h2 id="toc_125">Release History</h2>
+<h2 id="toc_312">Release History</h2>
 
 <p>See <a href="http://ozjs.org/#release">OzJS Release History</a></p>
 
-<h2 id="toc_126">License</h2>
+<h2 id="toc_313">License</h2>
 
 <p>Copyright (c) 2010 - 2013 dexteryy<br>
 Licensed under the MIT license.</p>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 
-<title>OzJS - a microkernel for modular javascript, with bundles of powerful yet micro-framework friendly AMD modules.</title>
+<title>OzJS - a microkernel for modular javascript, a toolchain for modern front-end, a micro-framework for growable WebApp.</title>
 
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/pygment_trac.css">
@@ -15,12 +15,14 @@
 <header>
 
 <p class="logo">OzJS</p>
-<p class="header">OzJS is a microkernel for modular javascript, with bundles of powerful yet micro-framework friendly AMD modules.</p>
+<p class="header">A microkernel for modular javascript, a toolchain for modern front-end, a micro-framework for growable WebApp.</p>
 
 <ul class="buttons">
   <li><a class="buttons github" href="https://github.com/dexteryy/OzJS">View On GitHub</a></li>
   <!--<li class="download"><a class="buttons" href="https://github.com/dexteryy/OzJS/zipball/master">Download ZIP</a></li>-->
   <!--<li class="download"><a class="buttons" href="https://github.com/dexteryy/OzJS/tarball/master">Download TAR</a></li>-->
+  <a href="http://weibo.com/ozjs" target="_blank" class="followme weibo">关注微博</a>
+  <a href="http://site.douban.com/199314/" target="_blank" class="followme doubansite">关注豆瓣小站</a>
 </ul>
 
 </header>
@@ -43,6 +45,7 @@
             <li><a href="/EventMaster/">EventMaster</a></li>
             <li><a href="/URLKit/">URLKit</a></li>
             <li><a href="/DollarJS/">DollarJS</a></li>
+            <li><a href="/SovietJS/">SovietJS</a></li>
             <li><a href="/CordJS/">CordJS</a></li>
             <li><a href="/ChoreoJS/">ChoreoJS</a></li>
             <li><a href="/mo/">Mo</a></li>
@@ -59,9 +62,9 @@
 
 <div class="wrapper">
 <section>
-<h6 id="toc_9"><a href="http://ozjs.org">&gt;&gt; English version</a> <a id="overview">&nbsp;</a></h6>
+<h6 id="toc_185"><a href="http://ozjs.org">&gt;&gt; English version</a> <a id="overview">&nbsp;</a></h6>
 
-<h1 id="toc_10">OzJS</h1>
+<h1 id="toc_186">OzJS</h1>
 
 <p>OzJS才不是神马脚本加载器呢！人家是一个在浏览器端运行时中（就是说它主要服务于语言层级，而不是文件层级。<a href="http://ozjs.org/ozma/">ozma.js</a>可以在静态构建环节中基于同等机制更好的处理文件）为大型或复杂JS程序提供长期以来严重缺失（你懂得！）的模块机制的微！内！核！它兼容当前的事实标准（<a href="https://github.com/amdjs/amdjs-api/wiki/AMD">AMD</a>，<a href="http://www.commonjs.org/specs/modules/1.0/">NodeJS/CommonJS</a> 和传统的 <a href="http://www.adequatelygood.com/2010/3/JavaScript-Module-Pattern-In-Depth">module pattern</a>）。</p>
 
@@ -69,31 +72,36 @@
 
 <p>oz.js的API和代码都是极简和稳定的，不会轻易加新功能（对一个实现模块机制的库来说，通过加入新配置选项或新插件的方式来满足新需求是多么可怕的故事啊！）。Oz项目现在专注于开发一大票能用于自由组合微框架、便于搭建WebApp的通用模块，代码都在<code>/mod</code>目录里，正在逐个发布和完善文档，一个<a href="http://ww4.sinaimg.cn/large/62651c14jw1dvpfdi27o7j.jpg">真实世界中的例子</a>。</p>
 
-<h2 id="toc_11">Toolchain <a id="toolchain">&nbsp;</a></h2>
+<p><em>----------- 以上是傲娇版简介，下面是价值观总结版 -----------</em></p>
 
-<h4 id="toc_12"><a href="http://ozjs.org/ozma">OzmaJS</a></h4>
+<p>OzJS是一个为“现代JS开发”提供支持的开源项目，反对臃肿冗余的、大而无当的、捆绑强塞的、封闭体系的、重复实现的、脱离实践的工具/库/框架，推崇单一目的、单一方案、单一层次、体积最小化、依赖最小化、重复最小化、自由选择、自由混搭、自由替换的模块，自底向上的提供当前欠缺的实现和工具，帮助JS开发者轻松构建传统网页脚本、大型或复杂JS程序、桌面或移动web应用。</p>
+
+<h2 id="toc_187">Toolchain <a id="toolchain">&nbsp;</a></h2>
+
+<h4 id="toc_188"><a href="http://ozjs.org/ozma">OzmaJS</a></h4>
 
 <ul>
 <li>Intelligent autobuild tool for OzJS</li>
+<li>Unique ability to support transparent dynamic dependence</li>
 <li><a href="https://github.com/dexteryy/ozma.js">Source code</a></li>
 </ul>
 
-<h4 id="toc_13"><a href="http://ozjs.org/grunt-ozjs">grunt-ozjs</a></h4>
+<h4 id="toc_189"><a href="http://ozjs.org/grunt-ozjs">grunt-ozjs</a></h4>
 
 <ul>
 <li>Grunt tasks for oz.js and ozma.js</li>
 <li><a href="https://github.com/dexteryy/grunt-ozjs">Source code</a></li>
 </ul>
 
-<h4 id="toc_14">istatic</h4>
+<h4 id="toc_190"><a href="https://github.com/mockee/istatic">istatic</a></h4>
 
 <ul>
 <li>A static-file dependency manager more than a package manager</li>
 <li>Let you quickly and automatically add modules of specified (or latest) version to your project</li>
-<li><a href="https://github.com/mockee/istatic">Source code</a></li>
+<li><a href="https://github.com/mockee/grunt-istatic">grunt-istatic</a></li>
 </ul>
 
-<h4 id="toc_15"><a href="http://ozjs.org/adapter">OzJS Adapter</a>:</h4>
+<h4 id="toc_191"><a href="http://ozjs.org/adapter">OzJS Adapter</a>:</h4>
 
 <ul>
 <li>Mini define/require mplementation for old web page</li>
@@ -101,13 +109,13 @@
 <li><a href="https://github.com/dexteryy/OzJS/blob/master/adapter.js">Source code</a></li>
 </ul>
 
-<h2 id="toc_16">Micro-framework <a id="framework">&nbsp;</a></h2>
+<h2 id="toc_192">Micro-framework <a id="framework">&nbsp;</a></h2>
 
 <p>It is time to stop using All-in-One JavaScript library or framework which bundle all functionalities and solutions within a single global namespace. </p>
 
 <p>OzJS Project provides plenty of tiny, mutually independent, single purpose modules to help you build(mix and match) your own MVC(or suchlike) framework.</p>
 
-<h4 id="toc_17"><a href="http://ozjs.org/EventMaster">EventMaster</a></h4>
+<h4 id="toc_193"><a href="http://ozjs.org/EventMaster">EventMaster</a></h4>
 
 <ul>
 <li>A simple, compact and consistent implementation of a variant of CommonJS&#39;s Promises and Events</li>
@@ -115,7 +123,7 @@
 <li><a href="https://github.com/dexteryy/EventMaster">Source code</a></li>
 </ul>
 
-<h4 id="toc_18"><a href="http://ozjs.org/URLKit">URLKit</a></h4>
+<h4 id="toc_194"><a href="http://ozjs.org/URLKit">URLKit</a></h4>
 
 <ul>
 <li>A lightweight implementation of routing and URL manager</li>
@@ -123,7 +131,7 @@
 <li><a href="https://github.com/dexteryy/URLKit">Source code</a></li>
 </ul>
 
-<h4 id="toc_19"><a href="http://ozjs.org/DollarJS">DollarJS</a></h4>
+<h4 id="toc_195"><a href="http://ozjs.org/DollarJS">DollarJS</a></h4>
 
 <ul>
 <li>A jQuery-compatible and non-All-in-One library which is more &quot;Zepto&quot; than Zepto.js</li>
@@ -131,14 +139,22 @@
 <li><a href="https://github.com/dexteryy/DollarJS">Source code</a></li>
 </ul>
 
-<h4 id="toc_20">CordJS</h4>
+<h4 id="toc_196"><a href="http://ozjs.org/SovietJS">SovietJS</a></h4>
+
+<ul>
+<li>Standalone UI event delegate implementation</li>
+<li>Provide multiple styles/modes: override, automatically preventDefault, partial matching, exact matching...</li>
+<li><a href="https://github.com/dexteryy/SovietJS">Source code</a></li>
+</ul>
+
+<h4 id="toc_197">CordJS</h4>
 
 <ul>
 <li>A tiny, pure, event-based model-view-binder (MVB) library which is far more thin than Backbone </li>
 <li>Coming soon...</li>
 </ul>
 
-<h4 id="toc_21"><a href="http://ozjs.org/ChoreoJS">ChoreoJS</a></h4>
+<h4 id="toc_198"><a href="http://ozjs.org/ChoreoJS">ChoreoJS</a></h4>
 
 <ul>
 <li>An animation library which uses &quot;stage&quot; and &quot;actor&quot; as metaphors</li>
@@ -148,7 +164,7 @@
 <li><a href="https://github.com/dexteryy/ChoreoJS">Source code</a></li>
 </ul>
 
-<h4 id="toc_22"><a href="http://ozjs.org/mo">Mo</a></h4>
+<h4 id="toc_199"><a href="http://ozjs.org/mo">Mo</a></h4>
 
 <ul>
 <li>A collection of OzJS core modules that form a library called &quot;Mo&quot; </li>
@@ -213,7 +229,7 @@
 <li><a href="https://github.com/dexteryy/mo">Source code</a></li>
 </ul>
 
-<h4 id="toc_23"><a href="http://ozjs.org/moui">Moui</a></h4>
+<h4 id="toc_200"><a href="http://ozjs.org/moui">Moui</a></h4>
 
 <ul>
 <li>A collection of OzJS UI behavior modules that form a library called &quot;Moui&quot; </li>
@@ -244,7 +260,7 @@
 <li><a href="https://github.com/dexteryy/moui">Source code</a></li>
 </ul>
 
-<h4 id="toc_24">Other recommended modules</h4>
+<h4 id="toc_201">Other recommended modules</h4>
 
 <ul>
 <li><a href="https://github.com/dexteryy/db.js">db.js</a>: 
@@ -254,7 +270,7 @@
 </ul></li>
 </ul>
 
-<h2 id="toc_25">Getting Started <a id="start">&nbsp;</a></h2>
+<h2 id="toc_202">Getting Started <a id="start">&nbsp;</a></h2>
 
 <p>Download <a href="https://raw.github.com/dexteryy/OzJS/master/oz.js">oz.js</a></p>
 
@@ -347,13 +363,13 @@ See usage for more detail:</p>
 <li>TodoMVC demo: coming soon...</li>
 </ul>
 
-<h2 id="toc_26">Tutorials <a id="ref">&nbsp;</a></h2>
+<h2 id="toc_203">Tutorials <a id="ref">&nbsp;</a></h2>
 
 <ul>
 <li><a href="http://ozjs.org/docs/define.html">define &amp; require</a></li>
 </ul>
 
-<h2 id="toc_27">In the Real World</h2>
+<h2 id="toc_204">In the Real World</h2>
 
 <ul>
 <li><a href="http://alphatown.com">Alphatown</a> <em>2D browser based virtual world</em></li>
@@ -363,16 +379,25 @@ See usage for more detail:</p>
 <li><a href="https://github.com/dexteryy/BugHunter">BugHunter</a> <em>Multiplayer &quot;answer first game&quot; or a competition responder system, based on NodeJS and OzJS</em></li>
 </ul>
 
-<h2 id="toc_28">More References</h2>
+<h2 id="toc_205">More References</h2>
 
 <ul>
 <li><a href="http://www.slideshare.net/dexter_yy/js-6228773">d2forum2010: 通用JS时代的模块机制和编译工具(slide)</a></li>
 <li><a href="http://www.slideshare.net/dexter_yy/mvc-8554206">d2forum2011: 新版阿尔法城背后的前端MVC实践(slide)</a></li>
 </ul>
 
-<h2 id="toc_29">Release History <a id="release">&nbsp;</a></h2>
+<h2 id="toc_206">Release History <a id="release">&nbsp;</a></h2>
 
 <ul>
+<li>2013.1.18
+
+<ul>
+<li>项目网页更新内容，增加微博和豆瓣小站的链接</li>
+<li><code>SovietJS</code> v0.0.1 发布</li>
+<li><code>mo/lang</code> 增加OOP工具<code>.construct()</code></li>
+<li><code>mo/lang</code> 拆分子模块</li>
+<li><code>ozma.js</code> 支持windows</li>
+</ul></li>
 <li>2012.12.2
 
 <ul>

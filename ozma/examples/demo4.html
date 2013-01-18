@@ -17,12 +17,14 @@
 <header>
 
 <p class="logo">OzJS</p>
-<p class="header">OzJS is a microkernel for modular javascript, with bundles of powerful yet micro-framework friendly AMD modules.</p>
+<p class="header">A microkernel for modular javascript, a toolchain for modern front-end, a micro-framework for growable WebApp.</p>
 
 <ul class="buttons">
   <li><a class="buttons github" href="https://github.com/dexteryy/OzJS">View On GitHub</a></li>
   <!--<li class="download"><a class="buttons" href="https://github.com/dexteryy/OzJS/zipball/master">Download ZIP</a></li>-->
   <!--<li class="download"><a class="buttons" href="https://github.com/dexteryy/OzJS/tarball/master">Download TAR</a></li>-->
+  <a href="http://weibo.com/ozjs" target="_blank" class="followme weibo">关注微博</a>
+  <a href="http://site.douban.com/199314/" target="_blank" class="followme doubansite">关注豆瓣小站</a>
 </ul>
 
 </header>
@@ -45,6 +47,7 @@
             <li><a href="/EventMaster/">EventMaster</a></li>
             <li><a href="/URLKit/">URLKit</a></li>
             <li><a href="/DollarJS/">DollarJS</a></li>
+            <li><a href="/SovietJS/">SovietJS</a></li>
             <li><a href="/CordJS/">CordJS</a></li>
             <li><a href="/ChoreoJS/">ChoreoJS</a></li>
             <li><a href="/mo/">Mo</a></li>
@@ -73,9 +76,7 @@
 <div class="highlight"><pre><code class="bash"><span class="nb">cd </span>examples/buildtool/
 jam install backbone
 ozma js/main_jam.js --jam -c js/ozconfig_jam.json
-</code></pre>
-</div>
-
+</code></pre></div>
 
 <h2>Running result of the demo: </h2>
 <ol>
@@ -93,16 +94,12 @@ ozma js/main_jam.js --jam -c js/ozconfig_jam.json
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;../../oz.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;jam/oz.config.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;js/main_jam.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-</code></pre>
-</div>
-
+</code></pre></div>
     </li>
     <li><var>jam/oz.js</var>里也包含了<var>oz.config.js</var>中的配置，所以可单独使用：
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;jam/oz.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;js/main_jam.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-</code></pre>
-</div>
-
+</code></pre></div>
     </li>
     <li>用<var>ozma</var>执行构建时如果包含<var>--jam</var>参数，会自动将<var>jam/oz.js</var>作为配置里的<var>loader</var>选项，否则会将<var>oz.config.js</var>的内容与开发者自定义的<var>loader</var>文件合并，存放在发布文件中</li>
     <li>使用Jam package时，不需要考虑module文件的真实路径，可直接用package的名字作为模块名。</li>
