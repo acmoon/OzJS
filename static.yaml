@@ -1,0 +1,29 @@
+#gitHostDict:
+  #code: http://code.dapps.douban.com/
+
+repos:
+  dexteryy/OzJS:
+    file:
+      /oz.js: /js/lib/
+      /adapter.js: /js/lib/
+  dexteryy/mo:
+    file:
+      /: /js/mo/
+  dexteryy/ChoreoJS:
+    file:
+      /choreo.js: /js/
+  dexteryy/DollarJS:
+    file:
+      /dollar.js: /js/
+  dexteryy/SovietJS:
+    file:
+      /soviet.js: /js/
+  dexteryy/EventMaster:
+    file:
+      /eventmaster.js: /js/
+  dexteryy/URLKit:
+    file:
+      /urlkit.js: /js/
+  #jquery/jquery:
+    #file:
+      #/dist/jquery.js: /js/
