@@ -65,11 +65,11 @@
 
 <div class="wrapper">
 <section>
-<h1 id="toc_40"><a href="/">OzJS</a> / define &amp; require</h1>
+<h1 id="toc_3079"><a href="/">OzJS</a> / define &amp; require</h1>
 
-<h2 id="toc_41">define的用法</h2>
+<h2 id="toc_3080">define的用法</h2>
 
-<h3 id="toc_42">1. AMD风格的公共模块</h3>
+<h3 id="toc_3081">1. AMD风格的公共模块</h3>
 
 <ul>
 <li>适合同时被多个项目使用的模块，也是发布为开源项目的推荐写法</li>
@@ -92,7 +92,7 @@
 </code></pre>
 </div>
 
-<h3 id="toc_43">2. AMD风格的私有模块</h3>
+<h3 id="toc_3082">2. AMD风格的私有模块</h3>
 
 <ul>
 <li>省略模块命名，适合仅在项目内部使用的私有模块，被写入依赖时可用相对当前文件的路径作为临时命名</li>
@@ -112,7 +112,7 @@
 </code></pre>
 </div>
 
-<h3 id="toc_44">3. 异步模块</h3>
+<h3 id="toc_3083">3. 异步模块</h3>
 
 <ul>
 <li>基于oz.js的内建模块&quot;finish&quot;</li>
@@ -131,7 +131,7 @@
 </code></pre>
 </div>
 
-<h3 id="toc_45">4. 远程模块</h3>
+<h3 id="toc_3084">4. 远程模块</h3>
 
 <ul>
 <li>用于依赖那些位于其他文件中、且命名与文件地址不一致的模块</li>
@@ -148,7 +148,7 @@
 </code></pre>
 </div>
 
-<h3 id="toc_46">5. 非AMD脚本声明为远程模块</h3>
+<h3 id="toc_3085">5. 非AMD脚本声明为远程模块</h3>
 
 <ul>
 <li>用于解决AMD代码对非AMD脚本的依赖，以及多个非AMD脚本之间的依赖（比如jquery依赖jquery.js）</li>
@@ -165,7 +165,7 @@
 </code></pre>
 </div>
 
-<h3 id="toc_47">6. CommonJS风格的公共模块</h3>
+<h3 id="toc_3086">6. CommonJS风格的公共模块</h3>
 
 <ul>
 <li>当define的参数不包含依赖关系（数组）时，会从模块代码中解析依赖关系</li>
@@ -182,7 +182,7 @@
 </code></pre>
 </div>
 
-<h3 id="toc_48">7. CommonJS风格的私有模块</h3>
+<h3 id="toc_3087">7. CommonJS风格的私有模块</h3>
 
 <ul>
 <li>同 <em>2</em> 和 <em>6</em></li>
@@ -197,9 +197,9 @@
 </code></pre>
 </div>
 
-<h2 id="toc_49">require的用法</h2>
+<h2 id="toc_3088">require的用法</h2>
 
-<h3 id="toc_50">require的机制</h3>
+<h3 id="toc_3089">require的机制</h3>
 
 <ul>
 <li>require的代码块等同于无命名、无输出、会在声明之后立刻尝试解决依赖并执行的模块代码，所以以下机制也适用于define</li>
@@ -221,7 +221,7 @@
 </code></pre>
 </div>
 
-<h3 id="toc_51">require的参数</h3>
+<h3 id="toc_3090">require的参数</h3>
 
 <ul>
 <li>用法类似define，同样支持CommonJS风格</li>
@@ -239,7 +239,7 @@
 </code></pre>
 </div>
 
-<h3 id="toc_52">require表达动态依赖</h3>
+<h3 id="toc_3091">require表达动态依赖</h3>
 
 <ul>
 <li>使用<a href="http://ozjs.org/ozma/">ozma</a>为产品环境做生成发布文件时，位于全局作用域中的require引入的依赖会被打包到主发布文件中，而位于模块代码内的require引入的依赖会被单独打包</li>
@@ -261,7 +261,7 @@
 </code></pre>
 </div>
 
-<h3 id="toc_53">require的配置</h3>
+<h3 id="toc_3092">require的配置</h3>
 
 <ul>
 <li>require.config可以多次调用，添加新的配置或覆盖之前的配置</li>
@@ -277,7 +277,7 @@
 </code></pre>
 </div>
 
-<h3 id="toc_54">重新执行模块</h3>
+<h3 id="toc_3093">重新执行模块</h3>
 
 <ul>
 <li>模块名称前的new!是一个插件，功能是重新执行模块代码，生成新的return对象或exports对象</li>
@@ -290,7 +290,7 @@
 </code></pre>
 </div>
 
-<h3 id="toc_55">相同模块代码作用于不同window</h3>
+<h3 id="toc_3094">相同模块代码作用于不同window</h3>
 
 <ul>
 <li>常用于在iframe页面里调用父页面中已执行过的模块</li>

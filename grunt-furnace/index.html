@@ -65,23 +65,27 @@
 
 <div class="wrapper">
 <section>
-<h1 id="toc_96">grunt-furnace</h1>
+<h1 id="toc_3138">grunt-furnace</h1>
 
-<p>Grunt tasks for transforming code from one format to another</p>
+<blockquote>
+<ul>
+<li>Grunt tasks for transforming code from one format to another</li>
+</ul>
+</blockquote>
 
-<p>Support: </p>
+<h2 id="toc_3139">Support</h2>
 
 <ul>
-<li>template &gt; AMD</li>
-<li>AMD &gt; CJS <em>(comming soon...)</em></li>
-<li>CJS &gt; AMD <em>(comming soon...)</em></li>
-<li>module pattern &gt; AMD <em>(comming soon...)</em></li>
+<li><a href="">TPL</a> &gt; <a href="https://github.com/amdjs/amdjs-api/wiki/AMD">AMD</a> - Use JS template file as AMD module no matter what syntax </li>
+<li>TPL &gt; <a href="http://wiki.commonjs.org/wiki/Modules/1.1">CJS</a> - Use JS template file as CommonJS module no matter what syntax</li>
+<li>AMD &gt; CJS - Make available AMD module in NodeJS or publish AMD module through NPM</li>
+<li>CJS &gt; AMD - Use <a href="https://github.com/component/component/wiki/Components">Component</a>-based module in your OzJS-based or RequireJS-based project </li>
 <li>AMD &gt; module pattern <em>(comming soon...)</em></li>
 </ul>
 
-<h2 id="toc_97">Config Example</h2>
+<h2 id="toc_3140">Config Example</h2>
 <div class="highlight"><pre><code class="javascript"><span class="nx">furnace</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">tplExample1</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">tplExample</span><span class="o">:</span> <span class="p">{</span>
         <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
             <span class="nx">importas</span><span class="o">:</span> <span class="s1">&#39;tpl&#39;</span><span class="p">,</span>
             <span class="nx">exportas</span><span class="o">:</span> <span class="s1">&#39;amd&#39;</span><span class="p">,</span>
@@ -89,38 +93,40 @@
         <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;tpl/**/*.tpl&#39;</span><span class="p">,</span>
         <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;js/app/tpl/&#39;</span>
     <span class="p">},</span>
-    <span class="nx">tplExample2</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">npmExample</span><span class="o">:</span> <span class="p">{</span>
         <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
-            <span class="nx">importas</span><span class="o">:</span> <span class="s1">&#39;tpl&#39;</span><span class="p">,</span>
-            <span class="nx">exportas</span><span class="o">:</span> <span class="s1">&#39;amd&#39;</span><span class="p">,</span>
+            <span class="nx">importas</span><span class="o">:</span> <span class="s1">&#39;amd&#39;</span><span class="p">,</span>
+            <span class="nx">exportas</span><span class="o">:</span> <span class="s1">&#39;cjs&#39;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="nx">files</span><span class="o">:</span> <span class="p">[{</span>
-            <span class="nx">expand</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>     <span class="c1">// Enable dynamic expansion.</span>
-            <span class="nx">cwd</span><span class="o">:</span> <span class="s1">&#39;tpl/&#39;</span><span class="p">,</span>
-            <span class="nx">src</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;**/*.tpl&#39;</span><span class="p">],</span> <span class="c1">// Actual pattern(s) to match.</span>
-            <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;js/app/&#39;</span><span class="p">,</span>   <span class="c1">// Destination path prefix.</span>
-            <span class="nx">ext</span><span class="o">:</span> <span class="s1">&#39;.tpl.js&#39;</span>
+            <span class="nx">expand</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nx">cwd</span><span class="o">:</span> <span class="s1">&#39;./&#39;</span><span class="p">,</span>
+            <span class="nx">src</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;**/*.js&#39;</span><span class="p">,</span> <span class="s1">&#39;!&lt;%= meta.npmPublishDir %&gt;/**&#39;</span><span class="p">,</span> <span class="s1">&#39;!node_modules/**&#39;</span><span class="p">,</span> <span class="s1">&#39;Gruntfile.js&#39;</span><span class="p">],</span>
+            <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;&lt;%= meta.npmPublishDir %&gt;/&#39;</span><span class="p">,</span>
+            <span class="nx">ext</span><span class="o">:</span> <span class="s1">&#39;.js&#39;</span>
         <span class="p">}]</span>
     <span class="p">}</span>
 <span class="p">},</span>
 </code></pre>
 </div>
 
-<h2 id="toc_98">Source code</h2>
+<p>See <a href="https://github.com/dexteryy/grunt-furnace/blob/master/Gruntfile.js">Gruntfile.js</a> and <a href="https://github.com/dexteryy/grunt-furnace/blob/master/tests">tests/</a> for more examples.</p>
+
+<h2 id="toc_3141">Source code</h2>
 
 <ul>
 <li><a href="https://github.com/dexteryy/grunt-furnace">View on Github</a></li>
 </ul>
 
-<h2 id="toc_99">More References</h2>
+<h2 id="toc_3142">More References</h2>
 
 <p>See <a href="http://ozjs.org/">OzJS Project Homepage</a></p>
 
-<h2 id="toc_100">Release History</h2>
+<h2 id="toc_3143">Release History</h2>
 
 <p>See <a href="http://ozjs.org/#release">OzJS Release History</a></p>
 
-<h2 id="toc_101">License</h2>
+<h2 id="toc_3144">License</h2>
 
 <p>Copyright (c) 2010 - 2013 dexteryy<br>
 Licensed under the MIT license.</p>
